@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "FlixIQ",
+  "version": "1.0",
+  "description": "IMDb insights meet your Netflix nights.",
+  "icons": {
+    "48": "./logo.png",
+    "128": "./logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.netflix.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "index.js"
+  },
+  "permissions": ["scripting", "activeTab"]
+}

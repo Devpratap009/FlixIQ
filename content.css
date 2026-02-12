@@ -1,0 +1,42 @@
+.flixiq-imdb {
+  background: #000;
+  color: #d2a500ff;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 1.3rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  animation: flixiqFadeIn 0.4s ease-in-out;
+  font-family: system-ui, sans-serif;
+  transition: all 0.3s ease;
+  cursor: default;
+  border: 1.5px solid rgba(210, 165, 0, 0.6);
+}
+
+.flixiq-imdb::before {
+  content: "★";
+  color: #d2a500ff;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.flixiq-imdb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(210, 165, 0, 0.25);
+}
+
+/* Fade-in animation */
+@keyframes flixiqFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
